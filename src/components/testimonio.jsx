@@ -6,12 +6,22 @@ function Testimonio (props) {
         <div className="contenedor">
             <img 
                 className="imagen"
-                src={require("../images/FreeCodeCamp1.png")}
+                src={require(`../images/FreeCodeCamp-${props.imagen}.png`)}
                 alt="Foto de estudiante"/>
             <div className="contenedorTexto">
-                <p className="nombre"> {props.nombre} in {props.pais}</p>
-                <p className="cargo">{props.cargo} at {props.empresa}</p>
-                <p className="testimonio">"{props.testimonio}"</p>
+
+                <p className="nombre">
+                    <strong>{props.nombre}</strong> in {props.pais}
+                </p>
+
+                <p className="cargo">
+                    {props.cargo} at <strong>{props.empresa}</strong>
+                </p>
+
+                <p className="testimonio">
+                    "{props.testimonio}"
+                </p>
+
             </div>
         </div>
     );
